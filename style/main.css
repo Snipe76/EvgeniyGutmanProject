@@ -243,12 +243,18 @@ footer {
     border-radius: 8px;
     text-align: center;
     width: 350px; /* Set the width to 300px */
+    overflow: hidden; /* Ensure the image doesn't overflow the box */
 }
 
 .project-image {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.project-item:hover .project-image {
+    transform: scale(1.1); /* Grow the image on hover */
 }
 
 .project-title {
