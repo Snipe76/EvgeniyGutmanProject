@@ -55,6 +55,14 @@ footer {
     text-decoration: none;
     color: #333;
     white-space: nowrap;
+    font-weight: bold; /* Make text bold */
+    font-size: 1.5rem; /* Slightly bigger text */
+    transition: transform 0.3s, color 0.3s; /* Add transition for hover effect */
+}
+
+.nav-link:hover {
+    transform: scale(1.1); /* Grow on hover */
+    color: #8ed1fc; /* Change color to #8ed1fc on hover */
 }
 
 .nav-item {
