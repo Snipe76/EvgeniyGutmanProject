@@ -9,10 +9,15 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 35px;
+    overflow-x: hidden;
+    /* Disable side scrolling */
 }
 
 body {
     font-family: 'Roboto', sans-serif !important;
+    overflow-x: hidden;
+    overflow: hidden;
+    /* Disable side scrolling */
 }
 
 .container {
@@ -35,7 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 70px;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
     position: fixed;
     background-color: white;
