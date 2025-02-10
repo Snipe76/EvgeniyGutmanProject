@@ -1,30 +1,41 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Global Styles */
 html {
     scroll-behavior: smooth;
-    /* scroll-padding-top: 35px; */
+    scroll-padding-top: 35px;
 }
 
 body {
     font-family: 'Roboto', sans-serif !important;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
+.container {
+    margin: 0;
+    padding: 0;
 }
 
+.invisible {
+    visibility: hidden;
+    position: static;
+}
+
+.bold-me {
+    font-weight: bold;
+}
+
+/* Header */
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
     position: fixed;
     background-color: white;
@@ -44,6 +55,21 @@ footer {
     padding: 0 1rem;
 }
 
+.header #header-my-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-spacer {
+    height: 70px;
+}
+
+.profile-pic {
+    width: 60px;
+    clip-path: circle();
+}
+
+/* Navigation */
 .nav {
     display: flex;
     align-items: center;
@@ -55,54 +81,241 @@ footer {
     text-decoration: none;
     color: #333;
     white-space: nowrap;
-    font-weight: bold; /* Make text bold */
-    font-size: 1.5rem; /* Slightly bigger text */
-    transition: transform 0.3s, color 0.3s; /* Add transition for hover effect */
+    font-weight: bold;
+    /* Make text bold */
+    font-size: 1.5rem;
+    /* Slightly bigger text */
+    transition: transform 0.3s, color 0.3s;
+    /* Add transition for hover effect */
 }
 
 .nav-link:hover {
-    transform: scale(1.1); /* Grow on hover */
-    color: #8ed1fc; /* Change color to #8ed1fc on hover */
+    transform: scale(1.1);
+    /* Grow on hover */
+    color: #8ed1fc;
+    /* Change color to #8ed1fc on hover */
 }
 
 .nav-item {
     padding-right: 1rem;
 }
 
-.container {
-    margin: 0;
-    padding: 0;
-}
-
-.invisible {
-    visibility: hidden;
-    position: static;
-}
-
-.header-spacer {
-    height: 70px;
-}
-
+/* Sections */
 .section-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding: 2rem 1rem;
+    /* Add padding to prevent overlapping */
 }
 
-.profile-pic {
-    width: 100px;
-    clip-path: circle();
+#home {
+    height: 460px;
+    background-image: url('https://web.projects-place.online/wp-content/uploads/2023/01/BG-Main-scaled.jpeg');
 }
 
-.header #header-my-name {
-    font-size: 2rem;
+#home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #13E8F163;
+}
+
+#logos {
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+#logos img {
+    max-height: 70px;
+    max-width: 70px;
+    margin: 0.5rem;
+    transition: transform .5s;
+}
+
+#logos img:hover {
+    transform: scale(1.3);
+}
+
+#about {
+    margin: 0 auto;
+    height: auto;
+    /* Adjust height to auto */
+    width: 65vw;
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    padding: 2rem 0;
+    /* Add padding to prevent overlapping */
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-image {
+    max-width: 30vw;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.about-text .about-me-paragraph {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.section-title {
+    font-size: 4rem;
     font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.bold-me {
+.section-paragraph {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Projects */
+#projects {
+    height: auto;
+    /* Adjust height to auto */
+    background-color: #F6F6F6;
+}
+
+.projects-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    /* Add padding to prevent overlapping */
+}
+
+.project-item {
+    flex: 1;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    /* Ensure the image doesn't overflow the box */
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    /* Add transition for hover effect */
+}
+
+.project-item:hover .project-image {
+    transform: scale(1.1);
+    /* Grow the image on hover */
+}
+
+.project-title {
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-top: 1rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.project-logos {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.project-logos .logo {
+    max-height: 40px;
+    max-width: 40px;
+    margin: 0 0.5rem;
+}
+
+.project-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.project-button:hover {
+    background-color: #555;
+}
+
+/* Contact */
+#contact {
+    height: auto;
+    /* Adjust height to auto */
+    background-color: #3A3A3A;
+    color: white;
+}
+
+#contact .background-image {
+    background-image: url('../images/Envalope.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 50%;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    z-index: -1;
+}
+
+#contact .section-content {
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1rem;
+    /* Add padding to prevent overlapping */
+}
+
+#contact .section-title {
+    text-align: left;
 }
 
 .contact-form-container {
@@ -156,189 +369,16 @@ footer {
     background-color: #555;
 }
 
-#home {
-    height: 460px;
-    background-image: url('https://web.projects-place.online/wp-content/uploads/2023/01/BG-Main-scaled.jpeg');
-}
-
-#home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-color: #13E8F163;
-}
-
-#logos {
-    height: auto;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
     padding: 1rem 0;
+    /* Add padding to prevent overlapping */
 }
 
-#logos img {
-    max-height: 70px;
-    max-width: 70px;
-    margin: 0.5rem;
-    transition: transform .5s;
-}
-
-#logos img:hover {
-    transform: scale(1.3);
-}
-
-#about {
-    margin: 0 auto;
-    height: 715px;
-    width: 65vw;
-    background-color: white;
-}
-
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    flex-direction: row;
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-me-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.about-text {
-    flex: 1;
-    padding: 1rem;
-}
-
-#projects {
-    height: 1200px;
-    background-color: #F6F6F6;
-}
-
-.projects-row {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-}
-
-.project-item {
-    flex: 1;
-    margin: 0 1rem;
-    padding: 1rem;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    text-align: center;
-    width: 350px; /* Set the width to 300px */
-    overflow: hidden; /* Ensure the image doesn't overflow the box */
-}
-
-.project-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s; /* Add transition for hover effect */
-}
-
-.project-item:hover .project-image {
-    transform: scale(1.1); /* Grow the image on hover */
-}
-
-.project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-.project-description {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-.project-logos {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.project-logos .logo {
-    max-height: 40px;
-    max-width: 40px;
-    margin: 0 0.5rem;
-}
-
-.project-button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.project-button:hover {
-    background-color: #555;
-}
-
-#contact {
-    height: 960px;
-    background-color: #3A3A3A;
-    color: white;
-}
-
-#contact .background-image {
-    background-image: url('../images/Envalope.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 50%;
-    width: 800px;
-    height: 600px;
-    position: absolute;
-    top: 0;
-    right: -100px;
-    z-index: -1;
-}
-
-#contact .section-content {
-    align-items: flex-start;
-    position: relative;
-    z-index: 1;
-}
-
-#contact .section-title {
-    text-align: left;
-}
-
-.section-title {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.section-paragraph {
-    font-size: 1.25rem;
-    margin-top: 0.5rem;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 1200px) {
     .container {
         max-width: 100%;
@@ -384,6 +424,30 @@ footer {
     .nav-link {
         padding: 0.5rem 0;
     }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-me-image {
+        max-width: 80%;
+    }
+
+    .projects-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%;
+        max-width: 400px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -393,5 +457,14 @@ footer {
 
     .nav-link {
         font-size: 0.875rem;
+    }
+
+    .about-me-image {
+        max-width: 100%;
+    }
+
+    .project-item {
+        width: 100%;
+        max-width: 350px;
     }
 }
