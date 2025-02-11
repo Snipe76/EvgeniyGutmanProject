@@ -45,7 +45,6 @@ body {
     position: fixed;
     background-color: white;
     margin: 0 auto;
-    box-shadow: 0 4px 20px -2px gray;
 }
 
 .header .logo {
@@ -97,7 +96,9 @@ body {
 
 .nav-link:hover {
     transform: scale(1.1);
+    /* Grow on hover */
     color: #8ed1fc;
+    /* Change color to #8ed1fc on hover */
 }
 
 .nav-item {
@@ -376,13 +377,11 @@ body {
 
 /* Footer */
 footer {
-    position: fixed;
-    bottom: 0;
-    z-index: 1000;
     background-color: black;
     color: white;
     text-align: center;
     padding: 1rem 0;
+    height: 100%;
     width: 100%;
 }
 
