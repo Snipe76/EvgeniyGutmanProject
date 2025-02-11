@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.project-image-section {
+    background-color: #EEEEEE;
+}
+
+#project-image-element {
+    width: 60vw;
+    border-radius: 25px;
+}
