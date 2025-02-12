@@ -12,19 +12,24 @@
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="script/burger.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header-content">
-            <img class="profile-pic logo" src="images/about-me.jpg" alt="My Profile Picture">
-            <h1 id="header-my-name">Evgeniy Gutman</h1>
-            <nav class="nav">
-                <div class="nav-item"><a class="nav-link" href="#home">Home</a></div>
+            <div class="header-logo">
+                <img class="profile-pic logo" src="images/about-me.jpg" alt="My Profile Picture">
+                <h1 id="header-my-name">Evgeniy Gutman</h1>
+            </div class="header-logo">
+            <nav class="nav" id="nav-links">
+                <div class="nav-item"><a class="nav-link" href="#home">Home</a>
+                </div>
                 <div class="nav-item"><a class="nav-link" href="#about">About Me</a></div>
                 <div class="nav-item"><a class="nav-link" href="#projects">Projects</a></div>
                 <div class="nav-item"><a class="nav-link" href="#contact">Contact</a></div>
             </nav>
+            <a onclick="toggleMenu()" id="burger">&#8801;</a>
         </div>
     </header>
 
@@ -118,7 +123,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- <div class="projects-row">
+                <div class="projects-row">
                     <div class="project-item">
                         <img src="images/project4.png" alt="Project 4" class="project-image">
                         <h2 class="project-title">Drink Invitation</h2>
@@ -142,8 +147,8 @@
                         <a href="projects/project1/transition.html">
                             <button class="project-button">View Project</button>
                         </a>
-                    </div> -->
-            </div>
+                    </div>
+                </div>
             </div>
         </section>
 
