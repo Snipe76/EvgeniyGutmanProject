@@ -47,10 +47,24 @@ body {
 .container .box form {
     display: flex;
     flex-direction: column;
-    text-align: left;
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+/* Center the form design */
+.container .box form .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container .box form h1,
+.container .box form p,
+.container .box form label {
+    width: 80%;
+    text-align: left;
 }
 
 /* Style the form title */
@@ -81,6 +95,10 @@ body {
     opacity: 1;
 }
 
+.container .box .form-design {
+    width: 65%;
+}
+
 /* Style the form input fields */
 .container .box form input[type="text"],
 .container .box form input[type="email"] {
@@ -93,7 +111,6 @@ body {
 
 /* Style the form submit button */
 .container .box form input[type="submit"] {
-    align-self: flex-end;
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
@@ -117,5 +134,13 @@ body {
     .container .box img {
         height: auto;
         /* Adjust height for smaller screens */
+    }
+
+    .container .box form .form-container {
+        width: 100%;
+    }
+
+    .container .box .form-design {
+        width: 65%;
     }
 }
