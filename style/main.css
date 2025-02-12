@@ -455,9 +455,9 @@ footer {
     }
 
     .nav {
+        display: none;
         flex-direction: column;
         align-items: center;
-        display: none;
         background-color: white;
         position: absolute;
         top: 70px;
