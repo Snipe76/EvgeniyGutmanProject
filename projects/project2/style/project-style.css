@@ -1,10 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Disable scrolling */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Disable scrolling */
+}
+
 .container {
     display: flex;
     flex-direction: row;
+    height: 100vh;
+    /* Make the container fill the height of the viewport */
 }
 
 .container .box {
     flex: 1;
-    padding: 20px;
     box-sizing: border-box;
+}
+
+.container .box:first-child {
+    flex: 1.25;
+    /* Give the first box more space */
+}
+
+.container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .box form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container .box form h1 {
+    text-align: left;
+    font: normal normal 900 43px/63px Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+    opacity: 1;
+}
+
+.container .box form p {
+    text-align: left;
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+    opacity: 1;
+}
+
+.container .box form label {
+    text-align: left;
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+    opacity: 1;
+}
+
+.container .box form input[type="text"],
+.container .box form input[type="email"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.container .box form input[type="submit"] {
+    align-self: flex-end;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #020253 0% 0% no-repeat padding-box;
+    color: white;
+    border: none;
+    opacity: 1;
 }
