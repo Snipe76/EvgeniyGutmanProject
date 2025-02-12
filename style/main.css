@@ -470,7 +470,7 @@ footer {
         font-size: 3rem;
         font-style: bold;
         cursor: pointer;
-        padding-right: 15px;
+        margin-right: 15px;
     }
 
     .header h1 {
