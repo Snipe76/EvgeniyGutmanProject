@@ -239,8 +239,8 @@ body {
 
 /* Home Section */
 #home {
-    height: 100vh;
-    min-height: 600px;
+    height: 90vh;
+    min-height: 500px;
     background-image: url('https://web.projects-place.online/wp-content/uploads/2023/01/BG-Main-scaled.jpeg');
     background-size: cover;
     background-position: center;
@@ -320,6 +320,20 @@ body {
     line-height: 1.7;
 }
 
+/* Home Section Name Color */
+#home .bold-me {
+    color: #2C2C2C;
+    text-shadow: 1px 1px 2px rgba(19, 232, 241, 0.3);
+    transition: all 0.3s ease;
+}
+
+#home .bold-me:hover {
+    color: #111 !important;
+    /* Force dark color */
+    text-shadow: 0 2px 4px rgba(19, 232, 241, 0.6);
+    /* Removed duplicate color declaration */
+}
+
 /* Logos Section */
 #logos {
     padding: 2rem 1rem;
@@ -332,8 +346,8 @@ body {
 }
 
 #logos img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     transition: all 0.3s ease;
     filter: grayscale(100%);
@@ -348,6 +362,11 @@ body {
 
 /* Responsive adjustments for home and logos */
 @media (max-width: 768px) {
+    #home {
+        height: 80vh;
+        min-height: 400px;
+    }
+
     #home .section-title {
         font-size: 3rem;
     }
@@ -365,12 +384,17 @@ body {
     }
 
     #logos img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 }
 
 @media (max-width: 480px) {
+    #home {
+        height: 70vh;
+        min-height: 300px;
+    }
+
     #home .section-title {
         font-size: 2.5rem;
     }
@@ -392,8 +416,8 @@ body {
     }
 
     #logos img {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -760,12 +784,15 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 50%;
-    width: 800px;
-    height: 600px;
+    opacity: 0.3;
+    width: 50vw;
+    /* Reduced width for better proportion */
+    height: 50vh;
+    /* Reduced height */
     position: absolute;
-    top: 0;
-    right: -100px;
+    top: -8%;
+    /* Changed from 50% to 8% */
+    right: 0;
     z-index: -1;
 }
 
@@ -971,5 +998,31 @@ button {
 
     .button-common {
         padding: 0.7rem 1.5rem;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    #contact .background-image {
+        width: 50vw;
+        height: 35vh;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact .background-image {
+        width: 70vw;
+        height: 30vh;
+        top: -6%;
+        right: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact .background-image {
+        width: 90vw;
+        height: 25vh;
+        top: -6%;
+        right: -10px;
     }
 }
