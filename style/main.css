@@ -240,6 +240,10 @@ body {
 
 /* Home Section */
 #home {
+    margin-top: -70px;
+    /* Counteract spacer */
+    padding-top: 70px;
+    /* Create safe space */
     height: 90vh;
     min-height: 500px;
     background-image: url('https://web.projects-place.online/wp-content/uploads/2023/01/BG-Main-scaled.jpeg');
@@ -393,16 +397,16 @@ body {
 @media (max-width: 480px) {
     #home {
         height: calc(100vh - 70px);
-        /* Account for header height */
+        /* Account for header */
         min-height: 300px;
-        padding-top: 70px;
-        /* Match header height */
-        margin-top: 0;
+        padding-top: 20px;
+        /* Reduced top padding */
     }
 
     #home-content {
-        padding-top: 1rem;
-        /* Reduce internal padding */
+        padding: 1rem;
+        transform: translateY(25px);
+        /* Fine-tune vertical centering */
     }
 
     #home .section-title {
@@ -1032,5 +1036,19 @@ button {
         height: 25vh;
         top: -6%;
         right: -10px;
+    }
+}
+
+/* Header Spacer */
+.header-spacer {
+    height: 70px;
+    /* Match header height */
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .header-spacer {
+        height: 70px;
+        /* Maintain height on mobile */
     }
 }
